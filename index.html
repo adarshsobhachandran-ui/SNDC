@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <title>Sree Narayana Dental Care | Best Dentist in Thiruvananthapuram</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* [Your existing CSS remains the same here] */
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-teal: #20c997;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--dark-text); line-height: 1.6; }
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); }
+        .nav-links { list-style: none; display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--dark-text); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.05), rgba(0, 86, 179, 0.05)), 
+                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+            height: 80vh; display: flex; align-items: center; padding: 0 8%;
+        }
+        .hero-text { max-width: 600px; }
+        .hero-text h1 { font-size: 3.5rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .btn-book {
+            background: var(--primary-blue); color: white; padding: 15px 35px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(0,86,179,0.3);
+        }
+        .btn-book:hover { transform: translateY(-3px); background: #004494; }
+        .services { padding: 80px 8%; background: var(--light-bg); text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card {
+            background: var(--white); padding: 30px; border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 2.5rem; color: var(--secondary-teal); margin-bottom: 15px; }
+        .contact-section { padding: 80px 8%; display: flex; gap: 50px; flex-wrap: wrap; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .map-container { flex: 1.5; min-width: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        footer { background: #111; color: white; padding: 40px 8%; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Sree Narayana Dental</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Location</a></li>
+        </ul>
+        <a href="tel:+914712590483" class="btn-book">Call: +91 471 259 0483</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Expert Dental Care You Can Trust</h1>
+            <p>Advanced treatments including Dental Implants, Orthodontics, and Cosmetic Dentistry in Thiruvananthapuram.</p><br>
+            <a href="#contact" class="btn-book">Get a Consultation</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Specialized Treatments</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-tooth"></i>
+                <h3>Dental Implants</h3>
+                <p>Restore your smile with permanent, natural-looking tooth replacements.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-align-center"></i>
+                <h3>Orthodontics</h3>
+                <p>Modern braces and clear aligners to straighten your teeth comfortably.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-grin-stars"></i>
+                <h3>Teeth Whitening</h3>
+                <p>Professional whitening for a brighter, more confident smile.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-info">
+            <h2>Visit Our Clinic</h2>
+            <p>Providing quality care with the latest technology in Chempazhanthy.</p><br>
+            <p><i class="fas fa-map-marker-alt"></i> Chempazhanthy, Thiruvananthapuram, Kerala</p>
+            <p><i class="fas fa-clock"></i> Mon - Sat: 9:30 AM - 7:00 PM</p>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.456789!2d76.90!3d8.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzMnMDYuMCJOIDc2wrA1NCc0OC4wIkU!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Sree Narayana Dental Care. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
