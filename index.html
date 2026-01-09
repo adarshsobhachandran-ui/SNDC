@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sree Narayana Dental Care | Best Dentist in Thiruvananthapuram</title>
+    <title>Sree Narayana Dental Care | Luxury Dentistry TVM</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,118 +12,183 @@
     <style>
         :root {
             --primary: #0a4da0;
-            --primary-light: #f4f9ff;
             --secondary: #00d2aa;
-            --dark: #1a1a1a;
+            --accent: #f4f9ff;
+            --dark: #111827;
             --white: #ffffff;
-            --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --glass: rgba(255, 255, 255, 0.85); /* Slightly more opaque for readability */
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            --transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark); line-height: 1.7; overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark); line-height: 1.8; overflow-x: hidden; background: #fff; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
 
-        /* Navigation */
+        /* --- NEW TOP BANNER STYLES --- */
+        .top-banner {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 1002;
+        }
+
+        .top-banner-left, .top-banner-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .top-banner a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.9;
+        }
+
+        .top-banner a:hover {
+            opacity: 1;
+            color: var(--secondary);
+        }
+
+        .top-banner i {
+            color: var(--secondary);
+        }
+
+        /* Navigation - Glassmorphism */
         nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 8%; background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 15px 8%; background: var(--glass);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+            transition: 0.3s;
         }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        .logo i { color: var(--secondary); }
-        .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: var(--transition); }
-        .nav-links a:hover { color: var(--secondary); }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 12px; }
+        .logo i { background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .nav-links { list-style: none; display: flex; gap: 40px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: var(--transition); position: relative; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background: var(--secondary); transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover::after { width: 100%; }
 
-        /* Hero Section */
+        /* Hero - Modern Depth */
         .hero {
-            height: 80vh; 
-            background: linear-gradient(135deg, rgba(10, 77, 160, 0.8), rgba(0, 210, 170, 0.3)), 
+            height: 90vh; 
+            background: linear-gradient(135deg, rgba(10, 77, 160, 0.85), rgba(0, 210, 170, 0.3)), 
             url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover; background-position: center; 
+            background-size: cover; background-position: center; background-attachment: fixed;
             display: flex; align-items: center; padding: 0 8%; color: white;
         }
-        .hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 700; text-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .hero-text p { font-size: 1.25rem; max-width: 600px; opacity: 0.95; font-weight: 300; }
 
-        /* Treatments Grid */
-        .services { padding: 100px 8%; background: var(--primary-light); }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; }
+        /* Specialized Treatments - Luxury Grid */
+        .services { padding: 120px 8%; background: var(--accent); position: relative; }
+        .section-header h2 { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+        .section-header p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 60px; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
         .card {
-            background: var(--white); padding: 40px; border-radius: 20px;
+            background: var(--white); padding: 50px 40px; border-radius: 30px;
             box-shadow: var(--shadow); transition: var(--transition);
-            border-bottom: 5px solid transparent;
+            border: 1px solid rgba(0,0,0,0.02); position: relative; overflow: hidden;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--secondary); }
-        .card i { font-size: 2.8rem; color: var(--secondary); margin-bottom: 20px; display: inline-block; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0; transition: 0.5s; z-index: 0; }
+        .card:hover { transform: translateY(-15px); }
+        .card:hover::before { opacity: 0.03; }
+        .card:hover i { transform: scale(1.1) rotate(5deg); }
+        
+        .card * { position: relative; z-index: 1; }
+        .card i { font-size: 3.5rem; margin-bottom: 30px; display: inline-block; transition: var(--transition); background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .card p { color: #555; font-size: 1rem; line-height: 1.7; }
 
-        /* Contact & Map Section */
-        .contact-section { padding: 100px 8%; display: flex; gap: 60px; flex-wrap: wrap; background: var(--white); }
-        .contact-info { flex: 1; min-width: 320px; }
-        .map-wrapper { 
-            flex: 1.5; min-width: 350px; border-radius: 25px; overflow: hidden; 
-            box-shadow: var(--shadow); height: 450px; border: 1px solid #eee;
-        }
+        /* Map Wrapper - Polished */
+        .contact-section { padding: 120px 8%; display: flex; gap: 80px; flex-wrap: wrap; align-items: center; }
+        .map-wrapper { flex: 1.5; min-width: 400px; border-radius: 40px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1); height: 500px; border: 8px solid var(--white); }
 
-        /* Float & Buttons */
-        .float-contact { position: fixed; bottom: 30px; right: 30px; z-index: 1000; display: flex; flex-direction: column; gap: 15px; }
-        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s; }
+        /* Floating Contact Hub */
+        .float-contact { position: fixed; bottom: 40px; right: 40px; z-index: 1000; }
+        .float-btn { width: 65px; height: 65px; border-radius: 22px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; box-shadow: 0 15px 30px rgba(10, 77, 160, 0.3); transition: var(--transition); margin-top: 15px; text-decoration: none; }
         .whatsapp { background: #25d366; }
         .phone { background: var(--primary); }
-        .btn { padding: 15px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; }
-        .btn-primary { background: var(--primary); color: white; border: none; cursor: pointer; }
+        .float-btn:hover { transform: scale(1.1) rotate(-5deg); filter: brightness(1.1); }
+
+        .btn { padding: 20px 45px; border-radius: 18px; text-decoration: none; font-weight: 700; font-size: 1rem; display: inline-block; transition: var(--transition); border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(10, 77, 160, 0.2); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(10, 77, 160, 0.4); }
 
         @media (max-width: 768px) {
-            .hero-text h1 { font-size: 2.5rem; }
+            .top-banner { display: none; } /* Hide top banner on mobile to keep it clean */
+            .hero-text h1 { font-size: 3rem; }
             .nav-links { display: none; }
-            .contact-section { padding: 60px 5%; }
+            .hero { height: 80vh; padding: 0 5%; text-align: center; }
         }
     </style>
 </head>
 <body>
 
+    <div class="top-banner">
+        <div class="top-banner-left">
+            <span><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span>
+        </div>
+        <div class="top-banner-right">
+            <a href="mailto:info@sreenarayanadentalcare.in"><i class="fas fa-envelope"></i> info@sreenarayanadentalcare.in</a>
+            <a href="https://www.google.com/maps/place/Sree+Narayana+Dental+Care/@8.5662413,76.9099352,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bf52dbded09b:0x175825cd517264f9!8m2!3d8.5662413!4d76.9099352!16s%2Fg%2F11sssb1cph?coh=277535&entry=tts&g_ep=EgoyMDI2MDEwNi4wIPu8ASoKLDEwMDc5MjA3M0gBUAM%3D&skid=5bcdb1da-8496-4c1a-9881-13861020f417"><i class="fas fa-map-marker-alt"></i> Chempazhanthy, TVM</a>
+        </div>
+    </div>
+
     <div class="float-contact">
-        <a href="https://wa.me/917907609090" class="float-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
         <a href="tel:+917907609090" class="float-btn phone"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/917907609090" class="float-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <nav>
-        <div class="logo"><i class="fas fa-tooth"></i> Sree Narayana <span style="color:var(--secondary)">Dental Care</span></div>
+        <div class="logo"><i class="fas fa-tooth"></i> Sree Narayana <span>Dental Care</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Treatments</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="tel:+917907609090" class="btn btn-primary" style="padding: 10px 25px;">Book Now</a>
+        <a href="tel:+917907609090" class="btn btn-primary" style="padding: 12px 30px; font-size: 0.9rem;">Book Appointment</a>
     </nav>
 
     <section class="hero" id="home">
-        <div class="hero-text animate__animated animate__fadeInLeft">
-            <h1>Advanced Dental Care <br>For Your Family.</h1>
-            <p>Experience the latest painless technology and world-class clinical expertise in Thiruvananthapuram.</p><br>
-            <a href="#services" class="btn btn-primary" style="background:var(--secondary)">View All Treatments</a>
+        <div class="hero-text animate__animated animate__fadeInUp">
+            <h1>Elegance in <br>Dental Wellness.</h1>
+            <p>Where advanced clinical expertise meets world-class technology in Thiruvananthapuram.</p><br>
+            <a href="#services" class="btn btn-primary" style="background: var(--secondary);">Explore Our Treatments</a>
         </div>
     </section>
 
     <section class="services" id="services">
-        <div class="section-header">
-            <h2>Our Specialized Treatments</h2>
-            <p>Expert oral healthcare solutions tailored for your comfort.</p>
+        <div class="section-header" style="text-align: center;">
+            <h2>Specialized Excellence</h2>
+            <p>Our clinic utilizes high-speed enterprise networks and secure data management to ensure your records are protected.</p>
         </div>
         <div class="grid">
             <div class="card">
                 <i class="fas fa-microscope"></i>
-                <h3>Root Canal (RCT)</h3>
-                <p>Advanced microscope-aided, painless root canal therapy to save natural teeth with maximum precision.</p>
+                <h3>Precision Root Canal</h3>
+                <p>Advanced microscope-aided therapy providing painless preservation of your natural smile.</p>
+                
             </div>
             <div class="card">
                 <i class="fas fa-tooth"></i>
                 <h3>Dental Implants</h3>
-                <p>Permanent and secure tooth replacements using global-standard titanium technology for a natural feel.</p>
+                <p>Global-standard permanent solutions for missing teeth with seamless integration.</p>
+                
             </div>
             <div class="card">
                 <i class="fas fa-wand-magic-sparkles"></i>
@@ -132,40 +197,35 @@
             </div>
             <div class="card">
                 <i class="fas fa-grin-stars"></i>
-                <h3>Cosmetic Dentistry</h3>
-                <p>Digital smile design, porcelain veneers, and makeovers for a flawless aesthetic appearance.</p>
+                <h3>Digital Smile Design</h3>
+                <p>Bespoke porcelain veneers and cosmetic makeovers using digital mapping for perfect symmetry.</p>
             </div>
             <div class="card">
                 <i class="fas fa-shield-virus"></i>
-                <h3>Gum Treatments</h3>
-                <p>Laser technology for treating bleeding gums and periodontitis with significantly faster healing times.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-align-center"></i>
-                <h3>Orthodontics</h3>
-                <p>Modern braces and invisible aligners to correct alignment and improve overall oral health.</p>
+                <h3>Periodontal Therapy</h3>
+                <p>Advanced laser care for gum wellness, promoting rapid healing and infection control.</p>
             </div>
             <div class="card">
                 <i class="fas fa-child"></i>
-                <h3>Pediatric Dentistry</h3>
-                <p>Gentle, child-friendly care designed to build positive dental habits for young patients.</p>
+                <h3>Pediatric Care</h3>
+                <p>Nurturing dental environments designed specifically for the wellness of our young patients.</p>
             </div>
         </div>
     </section>
 
     <section class="contact-section" id="contact">
         <div class="contact-info">
-            <h2 style="color: var(--primary); margin-bottom: 25px;">Visit Our Clinic</h2>
-            <div style="margin-bottom: 30px;">
-                <p style="font-weight: 700; color: var(--primary);"><i class="fas fa-map-marker-alt"></i> Location:</p>
-                <p>TC 9, 1211, Sreekariyam - Pothencode Rd,<br>Chempazhanthy, Thiruvananthapuram,<br>Kerala 695587</p>
+            <h2 style="color: var(--primary); margin-bottom: 25px; font-size: 2.5rem;">Visit Our Clinic</h2>
+            <div style="margin-bottom: 40px; background: var(--accent); padding: 30px; border-radius: 20px;">
+                <p style="font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-bottom: 10px;">Location</p>
+                <p style="font-size: 1.1rem; color: var(--dark);">TC 9, 1211, Sreekariyam - Pothencode Rd,<br>Chempazhanthy, Thiruvananthapuram,<br>Kerala 695587</p>
             </div>
-            <div style="margin-bottom: 30px;">
-                <p style="font-weight: 700; color: var(--primary);"><i class="fas fa-phone-alt"></i> Reach Us:</p>
-                <p>+91 7907609090</p>
-                <p>info@sreenarayanadentalcare.in</p>
+            <div style="margin-bottom: 40px;">
+                <p style="font-weight: 700; color: var(--primary); font-size: 0.8rem; margin-bottom: 10px;">Contact</p>
+                <p style="font-size: 1.3rem; font-weight: 600;">+91 7907609090</p>
+                <p style="color: #666;">info@sreenarayanadentalcare.in</p>
             </div>
-            <a href="https://www.google.com/maps/place/Sree+Narayana+Dental+Care/@8.5662413,76.9099352,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bf52dbded09b:0x175825cd517264f9!8m2!3d8.5662413!4d76.9099352!16s%2Fg%2F11sssb1cph?entry=ttu&g_ep=EgoyMDI2MDEwNi4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+            <a href="https://maps.app.goo.gl/YSmy6eKZaq2gctHQA" target="_blank" class="btn btn-primary">Open in Google Maps</a>
         </div>
 
         <div class="map-wrapper">
@@ -176,8 +236,8 @@
         </div>
     </section>
 
-    <footer style="background: var(--primary); color: white; padding: 40px 8%; text-align: center;">
-        <p>© 2026 Sree Narayana Dental Care.</p>
+    <footer style="background: var(--dark); color: white; padding: 80px 8%; text-align: center;">
+        <p style="opacity: 0.5; font-size: 0.9rem;">© 2026 Sree Narayana Dental Care. Security Managed via Aruba & Sophos Systems.</p>
     </footer>
 
     <script>
@@ -186,7 +246,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
