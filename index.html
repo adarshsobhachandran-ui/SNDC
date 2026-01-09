@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sree Narayana Dental Care | Best Dentist in Thiruvananthapuram</title>
+    <title>Sree Narayana Dental Care | Luxury Dentistry TVM</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #0f3460;
+            /* Palette matched to your brand image */
+            --primary: #004aad; /* Adjusted blue to match image "Sree Narayana" */
             --primary-light: #16213e;
-            --secondary: #00d2aa;
-            --gradient-main: linear-gradient(135deg, #0f3460 0%, #0a4da0 100%);
-            --gradient-accent: linear-gradient(135deg, #00d2aa 0%, #00a888 100%);
+            --secondary: #00cba9; /* Adjusted teal/green to match image "Dental Care" */
+            --gradient-main: linear-gradient(135deg, #004aad 0%, #003380 100%);
+            --gradient-accent: linear-gradient(135deg, #00cba9 0%, #00a888 100%);
             --surface: #f8FAFC;
             --dark: #1a1a1a;
             --white: #ffffff;
@@ -39,19 +40,19 @@
         .btn {
             padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600;
             display: inline-flex; align-items: center; gap: 10px; transition: var(--transition);
-            position: relative; overflow: hidden; z-index: 1;
+            position: relative; overflow: hidden; z-index: 1; justify-content: center;
         }
 
-        .btn-primary { background: var(--gradient-main); color: white; box-shadow: 0 8px 20px rgba(15, 52, 96, 0.2); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(15, 52, 96, 0.3); }
+        .btn-primary { background: var(--gradient-main); color: white; box-shadow: 0 8px 20px rgba(0, 74, 173, 0.2); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 74, 173, 0.3); }
 
-        .btn-accent { background: var(--gradient-accent); color: white; box-shadow: 0 8px 20px rgba(0, 210, 170, 0.3); }
-        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 210, 170, 0.4); }
+        .btn-accent { background: var(--gradient-accent); color: white; box-shadow: 0 8px 20px rgba(0, 203, 169, 0.3); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 203, 169, 0.4); }
 
         /* --- TOP BANNER --- */
         .top-banner {
             background: var(--primary-light); color: rgba(255,255,255,0.8);
-            padding: 12px 8%; display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 8%; display: flex; justify-content: space-between; align-items: center;
             font-size: 0.8rem; position: relative; z-index: 1002;
         }
         .top-banner a { color: white; text-decoration: none; transition: 0.3s; opacity: 0.8; }
@@ -61,23 +62,40 @@
         /* --- NAVIGATION --- */
         nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 8%; background: rgba(255, 255, 255, 0.9);
+            padding: 18px 8%; background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid rgba(0,0,0,0.05); transition: 0.3s;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 12px; }
-        .logo i { color: var(--secondary); font-size: 1.8rem; }
+        /* --- UPDATED LOGO STYLING --- */
+        .logo { 
+            font-size: 1.6rem; 
+            font-weight: 700; 
+            color: var(--primary); 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.5px;
+        }
+        .logo i { 
+            color: var(--secondary); /* Green tooth icon */
+            font-size: 1.8rem;
+        }
+        .logo span {
+            color: var(--secondary); /* Green "Dental Care" */
+            font-weight: 700;
+        }
         
         .nav-links { list-style: none; display: flex; gap: 35px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--primary-light); font-weight: 600; font-size: 0.9rem; transition: var(--transition); position: relative; }
+        .nav-links a { text-decoration: none; color: var(--primary-light); font-weight: 600; font-size: 0.95rem; transition: var(--transition); position: relative; }
         .nav-links a:hover { color: var(--secondary); }
 
         .menu-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
 
         /* Pulse Animation for CTA */
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 210, 170, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 210, 170, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 210, 170, 0); } }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 203, 169, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 203, 169, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 203, 169, 0); } }
         .pulse-btn { animation: pulse 2s infinite; }
 
         /* --- HERO SECTION --- */
@@ -86,20 +104,20 @@
             background: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
             display: flex; align-items: center; padding: 0 8%;
         }
-        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 52, 96, 0.9) 0%, rgba(15, 52, 96, 0.6) 100%); z-index: 0; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 52, 96, 0.92) 0%, rgba(15, 52, 96, 0.7) 100%); z-index: 0; }
         .hero-content { max-width: 650px; color: white; padding-top: 40px; position: relative; z-index: 1; }
 
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; color: white; font-weight: 700; }
-        .hero p { font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 40px; opacity: 0.9; font-weight: 300; border-left: 3px solid var(--secondary); padding-left: 20px; }
+        .hero p { font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 40px; opacity: 0.95; font-weight: 300; border-left: 3px solid var(--secondary); padding-left: 20px; }
 
         /* --- SERVICES --- */
         .services { padding: 100px 8%; background: var(--surface); position: relative; }
         .services::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 30px 30px; opacity: 0.5; pointer-events: none; }
 
-        .section-header { text-align: center; margin-bottom: 70px; position: relative; z-index: 2; }
+        .section-header { text-align: center; margin-bottom: 60px; position: relative; z-index: 2; }
         .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 15px; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; position: relative; z-index: 2; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; position: relative; z-index: 2; }
 
         .card {
             background: var(--white); padding: 50px 35px; border-radius: 20px;
@@ -112,7 +130,7 @@
         .card:hover::after { width: 100%; }
         
         .icon-box {
-            width: 70px; height: 70px; background: rgba(10, 77, 160, 0.05);
+            width: 70px; height: 70px; background: rgba(0, 74, 173, 0.05);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             margin-bottom: 25px; transition: var(--transition);
         }
@@ -128,7 +146,7 @@
         
         .map-wrapper { 
             flex: 1.2; 
-            min-width: 320px; /* Improved mobile width */
+            min-width: 320px; 
             width: 100%;
             height: 500px; 
             border-radius: 24px; 
@@ -137,23 +155,24 @@
             position: relative; /* Context for overlay */
         }
 
-        /* CUSTOM MAP OVERLAY CARD */
+        /* CUSTOM MAP OVERLAY CARD - STYLED LIKE GOOGLE MAPS */
         .map-overlay {
             position: absolute;
             top: 20px; left: 20px;
             background: white;
             padding: 15px 20px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
             z-index: 10;
             max-width: 260px;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            border-left: 4px solid var(--secondary);
         }
-        .mo-title { font-weight: 700; font-size: 0.95rem; color: #202124; margin-bottom: 4px; }
+        .mo-title { font-weight: 700; font-size: 1rem; color: #202124; margin-bottom: 4px; }
         .mo-rating { display: flex; align-items: center; gap: 5px; font-size: 0.9rem; color: #e7711b; font-weight: 600; }
         .mo-stars { color: #fbbc04; font-size: 0.8rem; }
         .mo-reviews { color: #70757a; font-weight: 400; font-size: 0.85rem; }
-        .mo-link { display: block; margin-top: 8px; font-size: 0.85rem; color: #1a73e8; text-decoration: none; font-weight: 500; }
+        .mo-link { display: block; margin-top: 10px; font-size: 0.85rem; color: var(--primary); text-decoration: none; font-weight: 600; }
         .mo-link:hover { text-decoration: underline; }
 
         /* --- FOOTER --- */
@@ -168,27 +187,60 @@
         .hidden-el { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .show-el { opacity: 1; transform: translateY(0); }
 
-        /* --- RESPONSIVE --- */
+        /* --- MOBILE RESPONSIVE OPTIMIZATIONS --- */
         @media (max-width: 992px) {
-            .hero { background-attachment: scroll; }
             .contact-section { flex-direction: column; }
             .map-wrapper { width: 100%; height: 400px; }
         }
 
         @media (max-width: 768px) {
-            .top-banner { flex-direction: column; gap: 8px; text-align: center; }
+            /* Banner Stack */
+            .top-banner { flex-direction: column; gap: 8px; text-align: center; padding: 15px; }
             .banner-group { flex-direction: column; gap: 5px; }
+            
+            /* Navbar Mobile Style */
             .menu-toggle { display: block; }
             .nav-links {
-                position: absolute; top: 100%; left: 0; width: 100%;
-                background: white; flex-direction: column; padding: 40px; gap: 20px;
+                position: absolute; 
+                top: 100%; left: 0; width: 100%;
+                background: rgba(255, 255, 255, 0.98); /* Solid glass look */
+                backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+                flex-direction: column; 
+                padding: 40px 20px; 
+                gap: 20px;
                 box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: 0.4s ease-in-out;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden */
+                transition: 0.4s ease-in-out;
             }
             .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-            .hero { padding-top: 100px; padding-bottom: 50px; text-align: center; justify-content: center; }
+            
+            /* Big Button on Mobile */
+            .nav-links .btn { width: 100%; text-align: center; }
+            .nav-links li { width: 100%; text-align: center; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+            .nav-links li:last-child { border-bottom: none; }
+
+            /* Hero Fixes */
+            .hero { 
+                padding-top: 40px; 
+                padding-bottom: 60px; 
+                text-align: center; 
+                justify-content: center;
+                background-attachment: scroll; /* Fixes mobile parallax issue */
+                border-bottom-left-radius: 40px; /* Stylish curve */
+                border-bottom-right-radius: 40px;
+            }
+            .hero-content { padding-top: 0; }
             .hero p { border-left: none; padding-left: 0; margin: 0 auto 30px auto; }
+            .hero .btn { width: 100%; margin-bottom: 10px; }
+            
+            /* Services Grid */
             .services { padding: 60px 6%; }
+            .section-header h2 { font-size: 2.2rem; }
+            
+            /* Contact */
+            .contact-section { padding: 60px 6%; }
+            .map-wrapper { height: 350px; }
+            .map-overlay { top: 10px; left: 10px; right: 10px; max-width: none; } /* Full width overlay on mobile map */
         }
     </style>
 </head>
@@ -200,13 +252,15 @@
         </div>
         <div class="banner-group">
             <a href="mailto:info@sreenarayanadentalcare.in">info@sreenarayanadentalcare.in</a>
-            <span style="opacity: 0.5;">|</span>
-            <a href="https://www.google.com/maps/place/Sree+Narayana+Dental+Care/@8.5662413,76.9099352,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bf52dbded09b:0x175825cd517264f9!8m2!3d8.5662413!4d76.9099352!16s%2Fg%2F11sssb1cph?coh=277535&entry=tts&g_ep=EgoyMDI2MDEwNi4wIPu8ASoKLDEwMDc5MjA3M0gBUAM%3D&skid=5bcdb1da-8496-4c1a-9881-13861020f417">Chempazhanthy, TVM</a>
+            <span style="opacity: 0.5; display: none; md: display: inline;">|</span>
+            <a href="https://maps.app.goo.gl/YSmy6eKZaq2gctHQA">Chempazhanthy, TVM</a>
         </div>
     </div>
 
     <nav>
-        <div class="logo"><i class="fas fa-tooth"></i> Sree Narayana <span>Dental Care</span></div>
+        <div class="logo">
+            <i class="fas fa-tooth"></i> 
+            <div>Sree Narayana <span>Dental Care</span></div>
         </div>
         
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -291,10 +345,20 @@
         </div>
 
         <div class="map-wrapper">
-            
+            <div class="map-overlay">
+                <div class="mo-title">Sree Narayana Dental Care</div>
+                <div class="mo-rating">
+                    4.9 
+                    <div class="mo-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="mo-reviews">(120+ reviews)</span>
+                </div>
+                <a href="https://maps.app.goo.gl/YSmy6eKZaq2gctHQA" target="_blank" class="mo-link">View larger map</a>
+            </div>
 
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.542289196309!2d76.90736027455891!3d8.566246596417757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf52dbded79b%3A0x175825cd517264f9!2sSree%20Narayana%20Dental%20Care!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"  
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.542289196309!2d76.90736027455891!3d8.566246596417757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf52dbded79b%3A0x175825cd517264f9!2sSree%20Narayana%20Dental%20Care!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
